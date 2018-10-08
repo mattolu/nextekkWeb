@@ -1,0 +1,42 @@
+@model Employee
+@{
+    ViewBag.Title = "New Employee";
+}
+
+<h1>@ViewBag.Title</h1>
+
+@using(Html.BeginForm()){
+  <div class="form-group">
+    @Html.LabelFor(model => model.FirstName)
+    @Html.TextBoxFor(model => model.FirstName, new { @class="form-control"}) 
+  </div>
+  <div class="form-group">
+    @Html.LabelFor(model => model.LastName)
+    @Html.TextBoxFor(model => model.LastName, new { @class="form-control"}) 
+  </div>
+  <div class="form-group">
+    @Html.LabelFor(model => model.DateOfBirth)
+    @Html.TextBoxFor(model => model.DateOfBirth, new { @class="form-control"}) 
+  </div>
+   <div class="form-group">
+    @Html.LabelFor(model => model.Sex)
+    @Html.TextBoxFor(model => model.Sex, new { @class="form-control"}) 
+  </div>
+   <div class="form-group">
+    @Html.LabelFor(model => model.MaritalStatus)
+    @Html.TextBoxFor(model => model.MaritalStatus, new { @class="form-control"}) 
+  </div>
+    <div class="form-group">
+    @Html.LabelFor(model => model.Password)
+    @Html.TextBoxFor(model => model.Password, new { @class="form-control"}) 
+  </div>
+  <div class="form-group">
+    @Html.LabelFor(model => model.ConfirmPassword)
+    @Html.TextBoxFor(model => model.ConfirmPassword, new { @class="form-control"}) 
+  </div>
+   <div class="form-group">
+    @Html.LabelFor(model => model.NumberOfChildren)
+    @Html.TextBoxFor(model => model.NumberOfChildren, new { @class="form-control"}) 
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+}

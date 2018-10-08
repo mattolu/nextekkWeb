@@ -1,0 +1,14 @@
+@model IEnumerable<Employee>
+@{
+    ViewBag.Title = "Employee";
+}
+<h1>@ViewBag.Title</h1>
+<ul>
+@foreach (var employee in Model)
+{
+    <li>@employee.FirstName @employee.LastName @employee.DateOfBirth @employee.Sex @employee.MaritalStatus
+    @employee.Password @employee.ConfirmPassword @employee.NumberOfChildren</li>
+}
+</ul>
+
+<div>@Html.ActionLink("New", "create")
